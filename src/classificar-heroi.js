@@ -1,5 +1,5 @@
   // Para capturar a resposta do usuário no temrinal 
-const readline = require('readline');
+const readline = require('readline')
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -14,24 +14,24 @@ function avaliarHeroi() {
       let nivelHeroi = "";
 
       if (XP <= 1000) {
-        nivelHeroi = "Ferro";
+        nivelHeroi = "Ferro"
       } else if (XP > 1000 && XP <= 2000) {
-        nivelHeroi = "Bronze";
+        nivelHeroi = "Bronze"
       } else if (XP > 2000 && XP <= 5000) {
-        nivelHeroi = "Prata";
+        nivelHeroi = "Prata"
       } else if (XP > 5000 && XP <= 7000) {
-        nivelHeroi = "Ouro";
+        nivelHeroi = "Ouro"
       } else if (XP > 7000 && XP <= 8000) {
-        nivelHeroi = "Platina";
+        nivelHeroi = "Platina"
       } else if (XP > 8000 && XP <= 9000) {
-        nivelHeroi = "Ascendente";
+        nivelHeroi = "Ascendente"
       } else if (XP > 9000 && XP <= 10000) {
-        nivelHeroi = "Imortal";
+        nivelHeroi = "Imortal"
       } else {
-        nivelHeroi = "Radiante";
+        nivelHeroi = "Radiante"
       }
 
-      console.log(" Herói de nome " + nomeHeroi + " está no nível de " + nivelHeroi);
+      console.log("Herói de nome " + nomeHeroi + " está no nível de " + nivelHeroi)
 
       // Perguntar se deseja testar outro herói
       rl.question("Deseja testar outro herói? (S/N): ", function(resposta) {
@@ -41,13 +41,13 @@ function avaliarHeroi() {
           console.log("Até logo!");
           rl.close(); // Encerra o programa
         } else {
-          console.log("Resposta inválida. Encerrando o programa.");
+          console.log("Resposta inválida. Encerrando o programa.")
           rl.close();
         }
-      });
-    });
-  });
+      })
+    })
+  })
 }
 
 // Iniciar o programa
-avaliarHeroi();
+avaliarHeroi()
